@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spring Data JPA</title>
+    <link rel="icon" href="SpringBoot-Logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="index.html">Overview</a> |
+        <a href="springCore.html">Spring Core</a> |
+        <a href="springArchitecture.html">Architecture</a> |
+        <a href="springJPA.html">Spring Data JPA</a> |
+        <a href="springQuiz.html">Spring Quiz</a>
+    </nav>
+
+    <h2 id="titleJPA">Spring Data JPA</h2>
+
+    <p id="paragJPA">
+        Spring Data JPA is a module to work with databases using Java objects.
+    </p>
+
+    <h3 id="subJPA1">Main Idea</h3>
+    <p id="paragJPA2">
+        Use ready-made methods like findAll() and save()
+    </p>
+
+    <h3 id="subJPA2">Key Components</h3>
+
+    <h4 id="entityTitle">Entity</h4>
+    <pre id="codeEntity">
+@Entity
+public class User {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
+private String name;
+}
+</pre>
+
+    <h4 id="repoTitle">Repository</h4>
+    <pre id="codeRepo">
+public interface UserRepository extends JpaRepository&lt;User, Integer&gt; {
+}
+</pre>
+
+    <h4 id="serviceTitle">Service</h4>
+    <pre id="codeService">
+@Service
+public class UserService {
+private final UserRepository repo;
+
+public List&lt;User&gt; getAllUsers() {
+return repo.findAll();
+}
+}
+</pre>
+
+    <h4 id="controllerTitle">Controller</h4>
+    <pre id="codeController">
+@RestController
+@RequestMapping("/users")
+public class UserController {
+
+@GetMapping
+public List&lt;User&gt; getUsers() {
+return service.getAllUsers();
+}
+}
+</pre>
+
+    <h3 id="featureTitleJPA">Features</h3>
+
+    <ul id="listJPA">
+        <li>No SQL needed</li>
+        <li>CRUD operations</li>
+        <li>Query generation</li>
+    </ul>
+
+    <h3 id="refTitle">References</h3>
+
+    <ul id="refList">
+        <li><a href="https://spring.io/projects/spring-boot" target="_blank">Spring Boot</a></li>
+        <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/" target="_blank">Docs</a></li>
+        <li><a href="https://www.w3schools.com/spring/" target="_blank">W3Schools</a></li>
+        <li><a href="https://www.geeksforgeeks.org/spring-boot/" target="_blank">GeeksforGeeks</a></li>
+        <li><a href="https://www.baeldung.com/spring-boot" target="_blank">Baeldung</a></li>
+    </ul>
+
+    <footer id="footerJPA">
+        <address>
+            Spring Boot Learning Page<br>
+            Created for educational purposes<br>
+            Contact: student@example.com
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

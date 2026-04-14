@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spring Quiz</title>
+    <link rel="icon" href="SpringBoot-Logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="index.html">Overview</a> |
+        <a href="springCore.html">Spring Core</a> |
+        <a href="springArchitecture.html">Architecture</a> |
+        <a href="springJPA.html">Spring Data JPA</a> |
+        <a href="springQuiz.html">Spring Quiz</a>
+    </nav>
+
+    <h2 id="titleQuiz">Spring Boot Quiz</h2>
+
+    <p id="paragQuiz">Answer all questions, then click Submit Quiz.</p>
+
+    <form id="quizForm">
+
+        <div class="quizBox">
+            <p><strong>1. What does IoC stand for?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Input of Control</label><br>
+            <label><input type="radio" name="q1" value="b"> Inversion of Control</label><br>
+            <label><input type="radio" name="q1" value="c"> Injection of Code</label><br>
+            <label><input type="radio" name="q1" value="d"> Internal Object Control</label>
+        </div>
+
+        <div class="quizBox">
+            <p><strong>2. Which of these is a Spring Boot feature?</strong></p>
+            <label><input type="radio" name="q2" value="a"> No Java support</label><br>
+            <label><input type="radio" name="q2" value="b"> Manual XML required always</label><br>
+            <label><input type="radio" name="q2" value="c"> Auto configuration</label><br>
+            <label><input type="radio" name="q2" value="d"> No backend support</label>
+        </div>
+
+        <div class="quizBox">
+            <p><strong>3. What does JPA help with?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Styling web pages</label><br>
+            <label><input type="radio" name="q3" value="b"> Working with databases using Java objects</label><br>
+            <label><input type="radio" name="q3" value="c"> Playing videos</label><br>
+            <label><input type="radio" name="q3" value="d"> Creating icons</label>
+        </div>
+
+        <div class="quizBox">
+            <p><strong>4. Which layer handles controllers and views?</strong></p>
+            <label><input type="radio" name="q4" value="a"> Web (MVC)</label><br>
+            <label><input type="radio" name="q4" value="b"> Data Access only</label><br>
+            <label><input type="radio" name="q4" value="c"> JVM layer</label><br>
+            <label><input type="radio" name="q4" value="d"> Browser cache</label>
+        </div>
+
+        <div class="quizBox">
+            <p><strong>5. Which method is commonly provided by Spring Data JPA?</strong></p>
+            <label><input type="radio" name="q5" value="a"> printPage()</label><br>
+            <label><input type="radio" name="q5" value="b"> drawCircle()</label><br>
+            <label><input type="radio" name="q5" value="c"> save()</label><br>
+            <label><input type="radio" name="q5" value="d"> makeVideo()</label>
+        </div>
+
+        <button type="submit" id="submitQuizButton">Submit Quiz</button>
+        <button type="button" id="resetQuizButton">Reset Quiz</button>
+    </form>
+
+    <div id="quizResult"></div>
+
+    <footer id="footerQuiz">
+        <address>
+            Spring Boot Learning Page<br>
+            Created for educational purposes<br>
+            Contact: student@example.com
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
